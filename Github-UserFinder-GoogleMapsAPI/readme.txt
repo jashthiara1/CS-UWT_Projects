@@ -9,3 +9,5 @@ Essentially my html utilizes github to access user information. We display many 
 side note:
 
 sadly I had finished the program and everything was working, but then the github accounts would not appear. I assumed I had run out of API requests since I had not altered the code from when it did work, so just incase I will include an image of how the results looked when it worked. 
+
+note: Google maps API currently not working as my student plan expired after graduation. 
