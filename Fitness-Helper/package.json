@@ -1,0 +1,20 @@
+{
+  "name": "jthiara-a3",
+  "version": "1.0.0",
+  "description": "assignment 3 jasharn thiara",
+  "main": "node.js",
+  "scripts": {
+    "build": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "bmi"
+  ],
+  "author": "Jasharn Thiara",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,177 @@
+#myTab {
+    display:none; 
+}
+
+#nav-links {
+    color: black;
+}
+
+#navbars {
+    color:lightgray;
+}
+
+#bmiTab {
+    color: black;
+}
+
+#home {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+body {
+    background-image:url("images/fitness.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#infoTab {
+    color: black;
+}
+
+#introCard {
+    margin-top: 40px;
+    margin-left: 120px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+#home-btn {
+    margin-left: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex !important;
+}
+
+#info {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#myTabContent {
+    margin-left: 40px;
+}
+
+#form-tab {
+    width: 440px;
+}
+
+.formz {
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+#top-bar {
+    margin-bottom: 0px;
+}
+
+.pos-pic {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+#submit-btn {
+    margin-left: 120px;
+}
+
+#bmi-tab {
+    margin-top: 40px;
+}
+
+#bmi-tab2{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#bmi-resources {
+    display:none;
+    max-width: 400px;
+}
+
+#bodyfat-tab {
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+#bodyfat-imgtab {
+    margin-left:40px;
+    margin-top:40px;
+}
+
+#bodyfat-btn {
+    margin-top: 20px;
+    margin-left:90px;
+}
+
+#bodyfat-tab2 {
+    display:none;
+    margin-left: 40px;
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+#bfat-list {
+    color:black;
+}
+
+#ideal-tab {
+    max-width: 400px;
+    margin-top: 40px;
+}
+
+#ideal-tab2 {
+    display:none;
+    margin-left: 40px;
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+#ideal-btn {
+    margin-top: 20px;
+    margin-left:90px;
+}
+
+#ideal-imgtab {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#cal-burns1 {
+    margin-top:40px;
+    max-width: 400px;
+    height: 400px;
+}
+
+#calories-btn {
+    margin-top: 20px;
+    margin-left:90px;
+}
+
+#minutes {
+    margin-top: 20px;
+}
+
+#cal-burns2 {
+    display:none;
+    margin-left: 40px;
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+#cal-burns3 {
+    margin-left: 40px;
+    margin-top: 40px;
+    max-width: 400px;
+}
