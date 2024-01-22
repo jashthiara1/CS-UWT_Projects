@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Chapter 10</title>
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>    
+<body class="tiled">
+<header>
+    <h1>Art Filters</h1>
+</header>
+<main>
+    <div id="sliderBox">
+        <form>
+           <label>Opacity: </label><p><input type="range" id="sliderOpacity" min="0" max="100" value="100" class="sliders" /> <span class="slider-text" id="numOpacity">100</span>%</p>
+           <p><label>Saturation: </label><input  type="range" id="sliderSaturation" min="1" max="300" value="100" class="sliders"/> <span class="slider-text" id="numSaturation">100</span>%</p>
+           <p><label>Brightness: </label><input type="range" id="sliderBrightness" min="0" max="300" value="100" class="sliders" /> <span class="slider-text" id="numBrightness">100</span>%</p>
+           <p><label>Hue Rotate: </label><input type="range" id="sliderHue" min="0" max="360" value="0" class="sliders" /> <span class="slider-text" id="numHue">0</span>deg</p>
+           <p><label>Grayscale: </label><input type="range" id="sliderGray" min="0" max="100" value="0" class="sliders"/> <span class="slider-text" id="numGray">0</span>%</p>
+           <p><label>Blur: </label><input type="range" id="sliderBlur" min="0" max="10" value="0" class="sliders" /> <span class="slider-text" id="numBlur">0</span>px</p>
+           <p><button id="resetFilters">Reset</button> </p>
+        </form>    
+    </div>
+    <figure id="imgManipulated">
+        <img class="big-pic" src="images/medium/painting1.jpg" > 
+        <figcaption>
+            <em>Still Life with Flowers in a Glass Vase</em> <br>
+            Jan Davidsz. de Heem, 1650 - 1683
+        </figcaption>
+    </figure>   
+    <div id="thumbBox">
+        <div class="small-pic"><img src="images/small/painting1.jpg"  alt="Still Life with Flowers in a Glass Vase" title="Jan Davidsz. de Heem, 1650 - 1683"/></div>
+        <div class="small-pic"><img src="images/small/painting2.jpg"  alt="Portrait of Alida Christina Assink" title="Jan Adam Kruseman, 1833"/></div>
+        <div class="small-pic"><img src="images/small/painting3.jpg"  alt="Self-portrait" title="Vincent van Gogh, 1887"/></div>
+        <div class="small-pic"><img src="images/small/painting4.jpg"  alt="William II, Prince of Orange, and his Bride, Mary Stuart" title="Anthony van Dyck, 1641"/></div>
+        <div class="small-pic"><img src="images/small/painting5.jpg"  alt="Milkmaid" title="Johannes Vermeer, c. 1660"/></div>
+    </div>
+</main>
+<script>
+
+// Jasharn Thiara
+// TCSS 460 A
+
+// jquery for clickign a small picture on the side
+$('.small-pic').click(function() {
+
+    // get path of small picture that is clicked
+    var newPic = $(this).find('img').attr('src');
+    var path = newPic.split('/').pop()
+
+    // create correct path to medium images and update big picture
+    var mediumPath = 'images/medium/' + path;
+    $('.big-pic').attr('src', mediumPath);
+
+    // get title and alt for image
+    var smallAlt = $(this).find('img').attr('alt');
+    var smallTitle = $(this).find('img').attr('title');
+
+    // change caption of big image
+    $('figcaption').html("<em>" + smallAlt + "</em>" + "<br>" + smallTitle);
+
+});
+
+$('.sliders').change(function() {
+
+    // temp var to store values. we did this for all because we do not know which slider it may be. 
+    var newSaturation = $('#sliderSaturation').val();
+    var newOpacity = $('#sliderOpacity').val();
+    var newBrightness = $('#sliderBrightness').val();
+    var newHue = $('#sliderHue').val();
+    var newGray = $('#sliderGray').val();
+    var newBlur = $('#sliderBlur').val();
+    var newValue = $(this).val();
+
+    // dynamically change text of the closeest span with class slider-text
+    $(this).closest('p').find('.slider-text').text(newValue);
+    
+    // layer filters and update image
+    $('.big-pic').css('filter', 'saturate(' + newSaturation + '%) opacity(' + newOpacity + '%) brightness(' + newBrightness + '%) hue-rotate(' + newHue + 'deg) \
+    grayscale(' + newGray + '%) blur(' + newBlur + 'px)');
+
+});
+
+// Jquery for resetting filters
+$('#resetFilters').click(function(event) {
+
+    // this statement prevents page from resetting. 
+    event.preventDefault();
+
+    // assign default values
+    $('#sliderSaturation').val(100);
+    $('#sliderOpacity').val(100);
+    $('#sliderBrightness').val(100);
+    $('#sliderHue').val(0);
+    $('#sliderGray').val(0);
+    $('#sliderBlur').val(0);
+    
+    // update image
+    $('.big-pic').css('filter', 'saturate(' + $('#sliderSaturation').val() + '%) opacity(' + $('#sliderOpacity').val() + '%) brightness(' + $('#sliderBrightness').val()
+     + '%) hue-rotate(' + $('#sliderHue').val() + 'deg) grayscale(' + $('#sliderGray').val() + '%) blur(' + $('#sliderBlur').val() + 'px)');
+
+    // reset texts
+    $('#numSaturation').text(100);
+    $('#numOpacity').text(100);
+    $('#numBrightness').text(100);
+    $('#numHue').text(0);
+    $('#numGray').text(0);
+    $('#numBlur').text(0);
+});
+
+</script>    
+</body>   
+</html>

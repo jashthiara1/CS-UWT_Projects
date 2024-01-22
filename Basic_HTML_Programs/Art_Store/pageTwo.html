@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html Lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Jasharn">
+        <title>Assignment 1</title>
+        <link rel="stylesheet" href="Assign1-styles.css" />
+    </head>
+
+    <div class="box1">
+        <div class="top-links">
+            <a href="#">My Account</a>
+            <a href="#">Wish List</a>
+            <a href="#">Shopping Cart</a>
+            <a href="#">Check Out</a>
+        </div>
+    </div>
+
+    <h1>Art Store</h1>
+
+    <div class="box2">
+        <div class="second-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Art Works</a>
+            <a href="#">Artists</a>
+        </div>
+    </div>
+
+    <div class="form"> 
+        <form action="http://faculty.washington.edu/ealmasri/assign1.php">
+            <p class="customer-reg">Customer Registration</p>
+            <p class="section-headers">1. User info</p>
+            <hr>
+            <table> 
+                <tr>
+                    <td><label for="first">First Name:</label></td>
+                    <td><label for="last">Last Name:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="first" name="first" required></td>
+                    <td><input type="text" id="last" name="last" required></td>
+                </tr>
+
+                <tr> 
+                <td><label for="email">Email</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="email" name="email" class="long-box" pattern=".+@.+" required></td>
+                </tr>
+
+                <tr> 
+                    <td><label for="pass1">Password</label></td>
+                    <td><label for="pass2">Password Repeat:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="pass1" name="pass1" pattern=".{6,}" required></td>
+                    <td><input type="text" id="pass2" name="pass2" pattern=".{6,}" required></td>
+                </tr>
+            </table>
+
+            <p class="section-headers">2. Location</p>
+            <hr>
+            <table> 
+                <tr> 
+                    <td><label for="address">Address</label></td>
+                </tr>
+                <tr> 
+                    <td><input type="text" id="address" name="address" class="long-box" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><label for="state">State</label></td>
+                    <td><label for="zip">Zip</label></td>
+
+                </tr>
+                <tr>
+                    <td><input type="text" id="city" name="city" required></td>
+                    <td><input type="text" id="state" name="state" class="small-box" required></td>
+                    <td><input type="text" id="zip" name="zip" class="small-box" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone</label></td>
+                    <td><label for="country">Country</label></td>
+                </tr>
+                <tr> 
+                    <td><input type="text" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}" required></td>
+                    <td> 
+                        <select id="country" name="country" required>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="continent">Continent</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="continents">
+                            <label><input type="radio" id="continent" name="continent" value="Africa">Africa</label>
+                            <label><input type="radio" id="continent" name="continent" value="Antarctica">Antarctica</label>
+                            <label><input type="radio" id="continent" name="continent" value="Asia">Asia</label>
+                            <label><input type="radio" id="continent" name="continent" value="Australia">Australia</label>
+                            <label><input type="radio" id="continent" name="continent" value="Europe">Europe</label>
+                            <label><input type="radio" id="continent" name="continent" value="North America">North America</label>
+                            <label><input type="radio" id="continent" name="continent" value="South America">South America</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <p class="section-headers">3. Personal Details</p>
+            <hr>
+
+            <table>
+                <tr>
+                    <td><label for="birthday">Birth Day</label></td>
+                    <td><label for="favorite">Favorite Color</label></td>
+                </tr>
+                <tr> 
+                    <td><input type="date" id="birthday" name="birthday" required></td>
+                    <td><input type="color" id="favorite" name="favorite" required></td>
+                </tr>
+
+                <tr> 
+                    <td><label for="interest">Interest in Art</label></td>
+                </tr>
+                <tr> 
+                    <td>
+                        <label>Minimal</label>
+                        <input type="range" id="interest" name="interest" required>
+                        <label>Love it!</label>
+                    </td>
+                </tr>
+            </table>
+            
+            <p class="section-headers">4. All Done</p>
+            <hr>
+
+            <table>
+                <tr>
+                    <td><label><input type="checkbox" id="accept" name= "accept">I agree to the <a href="#">terms of the site</a></label></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="submit" class="submit"><img src="start/start/images/button_ok.png" width="20" height="20">Sign me up!</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+        <footer>
+            <p>All images are copyright to their owners. This is just a hypothetical site &#169 2014 Copyright Art Store</p>
+        </footer>
+
+    </div>
