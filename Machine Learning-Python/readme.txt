@@ -2,3 +2,4 @@ Currently the CSV's are too large to include in my repository without messing up
 
 Music Recommender: https://www.kaggle.com/datasets/gregorut/videogamesales
 Housing_Price_Predictor: https://www.kaggle.com/datasets/camnugent/california-housing-prices
+Sentiment_Analysis_for_Stocks: https://www.kaggle.com/datasets/vivekrathi055/sentiment-analysis-on-financial-tweets
