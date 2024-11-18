@@ -1,3 +1,6 @@
+!!--Project no longer supported on Google Cloud Platform due to expiration of student email associated with GCP account.
+The final report can be read here: https://drive.google.com/drive/folders/1PVGYBJ95kK_jWj4n2Y2gj-rNVv1MoFPT--!!
+
 The way to run our project is to simply visit the url, https://34.82.237.225/. 
 The development platform used was Google cloud platform. We set up a VM instance, myphpdamin, and ICEcoder similar to assignment 3 of this course. 
 Visting https://34.82.237.225/Icecoder, will show the structure of our files (password is: Finalgroup1!. They are all within the folder called [ROOT]
